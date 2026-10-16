@@ -3,33 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LeonTech — Páginas que viram pedidos no WhatsApp · BH</title>
-<meta name="description" content="Páginas que transformam busca no Google em pedido no WhatsApp, para oficinas, clínicas de estética e prestadores de serviço de Belo Horizonte. Preço fechado a partir de R$ 250.">
-<meta name="theme-color" content="#0f172a">
+<title>LeonTech — Tecnologia e Soluções Digitais · Páginas que viram pedidos no WhatsApp</title>
+<meta name="description" content="Páginas que transformam busca no Google em pedido no WhatsApp, para oficinas, clínicas de estética e prestadores de serviço. Atendimento remoto em todo o Brasil. Preço fechado a partir de R$ 250.">
+<meta name="theme-color" content="#081e4a">
 <link rel="canonical" href="https://www.leontech.dev.br/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="LeonTech">
 <meta property="og:url" content="https://www.leontech.dev.br/">
-<meta property="og:title" content="LeonTech — Páginas que viram pedidos no WhatsApp">
-<meta property="og:description" content="Para negócios de BH: página no Google, pedido no WhatsApp e planilha com cada pedido. Veja a demo e os preços.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231d4ed8'/%3E%3Cpath d='M13 4 6 14h5l-1 6 7-10h-5l1-6z' fill='%23fff'/%3E%3C/svg%3E">
+<meta property="og:title" content="LeonTech — Tecnologia e Soluções Digitais">
+<meta property="og:description" content="Páginas que transformam busca no Google em pedido no WhatsApp. Atendimento remoto em todo o Brasil. Veja a demo e os preços.">
+<meta property="og:image" content="https://www.leontech.dev.br/marca/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo da LeonTech, um leão com circuitos, e o texto Tecnologia e Soluções Digitais">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="marca/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="marca/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="marca/apple-touch-icon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "LeonTech",
+  "slogan": "Tecnologia e Soluções Digitais",
   "url": "https://www.leontech.dev.br/",
+  "logo": "https://www.leontech.dev.br/marca/leontech-principal.png",
+  "image": "https://www.leontech.dev.br/marca/og-image.png",
   "telephone": "+55 31 99286-8113",
-  "description": "Páginas que transformam busca no Google em pedido no WhatsApp, para negócios locais de Belo Horizonte.",
-  "areaServed": [{ "@type": "City", "name": "Belo Horizonte" }, { "@type": "City", "name": "Contagem" }],
+  "description": "Páginas que transformam busca no Google em pedido no WhatsApp. Atendimento remoto em todo o Brasil, com base em Belo Horizonte.",
+  "areaServed": { "@type": "Country", "name": "Brasil" },
   "priceRange": "R$ 150 – R$ 1.390"
 }
 </script>
 <style>
-  /* Mesmo visual da landing (landing/index.html), sem JavaScript. */
+  /* Identidade Visual LeonTech V2 (marinho, ciano e azul de ação), sem JavaScript. */
   :root {
-    --cor: #1d4ed8; --cor-escura: #1e3a8a; --cor-clara: #dbeafe;
-    --fundo: #f6f7fb; --cartao: #ffffff; --texto: #0f172a; --suave: #4b5563; --fraco: #64748b;
+    --cor: #075e8c; --cor-escura: #081e4a; --cor-clara: #d9f3fb; --ciano: #00b9e8;
+    --fundo: #f4f8ff; --cartao: #ffffff; --texto: #081e4a; --suave: #44506a; --fraco: #5d6a82;
     --borda: #e5e7eb; --ok: #15803d; --whats: #128c7e; --raio: 18px;
     --sombra: 0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.08);
     --sombra-forte: 0 2px 4px rgba(15,23,42,.06), 0 24px 48px rgba(15,23,42,.16);
@@ -49,7 +60,8 @@
   .btn .ico { font-size: 18px; }
   .btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
   .btn:active { transform: translateY(0) scale(.99); }
-  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--cor); outline-offset: 3px; }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--cor-escura); outline-offset: 3px; box-shadow: 0 0 0 6px #fff; }
+  footer a:focus-visible { outline-color: #fff; box-shadow: none; }
   .btn-primario { background: var(--cor); color: #fff; box-shadow: 0 8px 20px -6px var(--cor); }
   .btn-whats { background: var(--whats); color: #fff; box-shadow: 0 8px 20px -8px var(--whats); }
   .btn-claro { background: #fff; color: var(--cor-escura); }
@@ -59,7 +71,9 @@
   header.topo { background: rgba(255,255,255,.88); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--borda); position: sticky; top: 0; z-index: 10; }
   header.topo .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
   .marca { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--texto); text-decoration: none; min-width: 0; }
-  .marca-ico { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: linear-gradient(135deg, var(--cor), var(--cor-escura)); color: #fff; font-size: 20px; flex: none; }
+  .marca img { display: block; height: 36px; width: auto; }
+  .placa-logo { display: inline-block; padding: 12px; background: #fff; border-radius: 10px; margin-bottom: 14px; }
+  .placa-logo img { display: block; width: 160px; height: auto; }
   .menu { display: flex; gap: 22px; font-size: 15px; }
   .menu a { color: var(--suave); text-decoration: none; font-weight: 550; }
   .menu a:hover { color: var(--texto); }
@@ -82,8 +96,8 @@
   .ilustracao .placa::before, .ilustracao .placa::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); }
   .ilustracao .placa::before { width: 70%; aspect-ratio: 1; right: -18%; top: -22%; }
   .ilustracao .placa::after { width: 45%; aspect-ratio: 1; left: -12%; bottom: -16%; }
-  .ilustracao .grande { position: absolute; left: 50%; top: 47%; transform: translate(-45%, -50%); width: 38%; aspect-ratio: 1; border-radius: 30%; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); display: grid; place-items: center; color: #fff; font-size: clamp(60px, 9vw, 104px); }
-  .ilustracao .grande .ico { stroke-width: 1.6; }
+  .ilustracao .grande { position: absolute; left: 50%; top: 47%; transform: translate(-45%, -50%); width: 46%; aspect-ratio: 1; border-radius: 28%; background: #fff; box-shadow: 0 0 0 10px rgba(255,255,255,.12), var(--sombra-forte); display: grid; place-items: center; }
+  .ilustracao .grande img { display: block; width: 80%; height: auto; }
   .notif { position: absolute; display: flex; align-items: center; gap: 12px; background: #fff; border-radius: 16px; padding: 12px 16px; box-shadow: var(--sombra-forte); font-size: 14px; max-width: 78%; }
   .notif .bolha { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; font-size: 19px; flex: none; }
   .notif b { display: block; font-size: 14px; color: var(--texto); }
@@ -180,13 +194,13 @@
   .cta-final p { opacity: .9; margin: 0 0 24px; position: relative; }
   .cta-final .acoes { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
 
-  footer { background: #0b1220; color: #cbd5e1; font-size: 14px; padding: 48px 0 96px; }
+  footer { background: var(--cor-escura); color: #d3dcec; font-size: 14px; padding: 48px 0 96px; }
   footer .colunas { display: grid; grid-template-columns: 1.2fr 1fr 1.6fr; gap: 32px; }
   footer h3 { color: #fff; font-size: 15px; margin: 0 0 10px; }
   footer p { margin: 0 0 8px; }
-  footer a { color: #e2e8f0; }
-  footer .marca { color: #fff; margin-bottom: 10px; }
-  footer .direitos { margin-top: 24px; padding-top: 16px; border-top: 1px solid #1e293b; color: #94a3b8; }
+  footer a { color: #fff; }
+  footer .destaque-ciano { color: #5fd6f5; }
+  footer .direitos { margin-top: 24px; padding-top: 16px; border-top: 1px solid #1d3466; color: #a9b6cf; }
 
   .whats-flutuante { position: fixed; right: 16px; bottom: 16px; z-index: 20; width: 58px; height: 58px; padding: 0; border-radius: 50%; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
   .whats-flutuante .ico { font-size: 26px; }
@@ -221,18 +235,15 @@
 </head>
 <body>
 
-<!-- Ícones (mesmo desenho dos ícones de landing/nichos.js) -->
+<!-- Ícones de interface (mesmo desenho de landing/nichos.js). Logos em marca/ (Identidade Visual V2). -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-conversa" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5A8.5 8.5 0 1 1 21 11.5z"/></symbol>
   <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="i-mapa" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
   <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.4 3.4 7.9 8 9 4.6-1.1 8-4.6 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
   <symbol id="i-sino" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
-  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
   <symbol id="i-tabela" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
-  <symbol id="i-tela" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
   <symbol id="i-pasta" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
   <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
 </svg>
@@ -241,7 +252,7 @@
 
 <header class="topo">
   <div class="container">
-    <a class="marca" href="#"><span class="marca-ico"><svg class="ico"><use href="#i-raio"/></svg></span><span>LeonTech</span></a>
+    <a class="marca" href="#"><img src="marca/leontech-lettering.png" alt="LeonTech" width="164" height="36"></a>
     <nav class="menu" aria-label="Seções">
       <a href="#como-funciona">Como funciona</a>
       <a href="#pacotes">Pacotes</a>
@@ -256,9 +267,9 @@
   <div class="hero">
     <div class="container">
       <div>
-        <div class="selo"><span class="ponto"><svg class="ico"><use href="#i-mapa"/></svg></span>Belo Horizonte e região</div>
+        <div class="selo"><span class="ponto"><svg class="ico"><use href="#i-mapa"/></svg></span>Atendimento remoto em todo o Brasil</div>
         <h1>Páginas que transformam busca no Google em pedido no WhatsApp</h1>
-        <p class="sub">Para oficinas, clínicas de estética e prestadores de serviço de BH. O cliente acha você no Google, pede o orçamento em menos de um minuto e o pedido chega no seu WhatsApp e numa planilha.</p>
+        <p class="sub">Para oficinas, clínicas de estética e prestadores de serviço, em qualquer cidade. O cliente acha você no Google, pede o orçamento em menos de um minuto e o pedido chega no seu WhatsApp e numa planilha.</p>
         <div class="acoes">
           <a class="btn btn-primario" href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Ver a demo funcionando<svg class="ico"><use href="#i-seta"/></svg></a>
           <a class="btn btn-whats" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener"><svg class="ico"><use href="#i-conversa"/></svg>Falar no WhatsApp</a>
@@ -267,7 +278,7 @@
       </div>
 
       <div class="ilustracao" aria-hidden="true">
-        <div class="placa"><div class="grande"><svg class="ico"><use href="#i-conversa"/></svg></div></div>
+        <div class="placa"><div class="grande"><img src="marca/leontech-simbolo.png" alt="" width="400" height="418"></div></div>
         <div class="notif n1"><span class="bolha"><svg class="ico"><use href="#i-sino"/></svg></span><span><b>Novo pedido de orçamento</b><small>pelo site · exemplo</small></span></div>
         <div class="notif n2"><span class="bolha"><svg class="ico"><use href="#i-tabela"/></svg></span><span><b>Anotado na planilha</b><small>origem: Google · exemplo</small></span></div>
       </div>
@@ -288,14 +299,14 @@
     <div class="container">
       <div class="texto">
         <span class="rotulo">Quem é a LeonTech</span>
-        <h2 class="titulo">Um desenvolvedor de BH cuidando do seu Google e do seu WhatsApp</h2>
+        <h2 class="titulo">Tecnologia e soluções digitais para o seu negócio, de qualquer lugar do Brasil</h2>
         <!-- Quando quiser, acrescente aqui seu nome e uma foto sua: aumenta a confiança. -->
-        <p>A LeonTech é o meu trabalho: sou desenvolvedor aqui em Belo Horizonte e atendo cada cliente pessoalmente, do primeiro contato até a página no ar.</p>
+        <p>A LeonTech é o meu trabalho: sou desenvolvedor, tenho base em Belo Horizonte e atendo empresas de todo o Brasil pelo WhatsApp. Cuido de cada cliente pessoalmente, do primeiro contato até a página no ar.</p>
         <p>O dono de oficina ou de clínica não precisa de “site bonito”. Precisa que <strong>quem procura no Google consiga pedir um orçamento</strong> e que <strong>nenhum pedido se perca</strong> no WhatsApp. É isso que eu monto.</p>
         <p>Sem contrato longo e sem promessa milagrosa: preço fechado, prazo combinado e você vê os pedidos chegando.</p>
       </div>
       <ul class="motivos">
-        <li><svg class="ico"><use href="#i-mapa"/></svg><span><b>Daqui de BH</b>Atendo Belo Horizonte e Contagem, presencialmente ou pelo WhatsApp.</span></li>
+        <li><svg class="ico"><use href="#i-mapa"/></svg><span><b>Atendimento em todo o Brasil</b>Remoto, pelo WhatsApp, para qualquer cidade. Em BH e região, também presencialmente.</span></li>
         <li><svg class="ico"><use href="#i-relogio"/></svg><span><b>Entrega rápida</b>De 2 a 5 dias úteis, conforme o pacote.</span></li>
         <li><svg class="ico"><use href="#i-escudo"/></svg><span><b>Tudo no seu nome</b>Domínio, planilha e perfil no Google ficam com você.</span></li>
       </ul>
@@ -310,7 +321,7 @@
         <p class="lead">Uma página simples, rápida no celular e feita para uma coisa só: virar pedido.</p>
       </div>
       <div class="grade passos">
-        <div class="item"><h3>O cliente procura</h3><p>Ele busca “oficina perto de mim” ou “limpeza de pele em BH” e encontra o seu negócio no Google.</p></div>
+        <div class="item"><h3>O cliente procura</h3><p>Ele busca “oficina perto de mim” ou “limpeza de pele no centro” e encontra o seu negócio no Google.</p></div>
         <div class="item"><h3>Abre a sua página</h3><p>Vê seus serviços, o bairro e o horário, e pede o orçamento pelo formulário ou pelo botão do WhatsApp.</p></div>
         <div class="item"><h3>O pedido chega até você</h3><p>Nome, telefone e serviço chegam no WhatsApp e ficam anotados numa planilha com a origem de cada pedido.</p></div>
       </div>
@@ -462,6 +473,7 @@
       </div>
       <div>
         <details><summary>Preciso já ter site ou domínio?</summary><p>Não. Se você ainda não tem domínio, eu ajudo a registrar no seu nome (cerca de R$ 40 por ano, pago direto ao Registro.br). Ele fica sempre com você.</p></details>
+        <details><summary>A LeonTech atende fora de Belo Horizonte?</summary><p>Sim. O atendimento é remoto, pelo WhatsApp, para negócios de qualquer cidade do Brasil. Em BH e região também dá para combinar uma visita.</p></details>
         <details><summary>Tem mensalidade obrigatória?</summary><p>Não. Os pacotes têm preço fechado. A manutenção de R$ 150/mês é opcional e pode ser cancelada a qualquer momento, com aviso de 30 dias.</p></details>
         <details><summary>Dá para garantir primeira página do Google ou número de clientes?</summary><p>Não, e desconfie de quem garante. O que eu entrego é o seu negócio bem apresentado no Google e um caminho fácil para o cliente pedir, com cada pedido anotado para você acompanhar.</p></details>
         <details><summary>Quanto tempo leva?</summary><p>Perfil no Google em 2 dias, Essencial em 3 dias úteis e Completo em 5 dias úteis, contando a partir do envio das informações e da primeira parcela.</p></details>
@@ -489,13 +501,14 @@
   <div class="container">
     <div class="colunas">
       <div>
-        <div class="marca"><span class="marca-ico"><svg class="ico"><use href="#i-raio"/></svg></span><strong>LeonTech</strong></div>
-        <p>Páginas e Google para negócios de Belo Horizonte.</p>
+        <div class="placa-logo"><img src="marca/leontech-principal.png" alt="LeonTech" width="160" height="148" loading="lazy"></div>
+        <p>Tecnologia e Soluções Digitais.</p>
+        <p class="destaque-ciano">Atendimento remoto em todo o Brasil.</p>
       </div>
       <div>
         <h3>Contato</h3>
         <p>WhatsApp: <a href="https://wa.me/5531992868113" target="_blank" rel="noopener">(31) 99286-8113</a></p>
-        <p>Belo Horizonte e Contagem/MG</p>
+        <p>Base em Belo Horizonte/MG</p>
         <p><a href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">demo.leontech.dev.br</a></p>
       </div>
       <div>
