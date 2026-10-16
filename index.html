@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeonTech — Páginas que viram pedidos no WhatsApp · BH</title>
+<meta name="description" content="Páginas que transformam busca no Google em pedido no WhatsApp, para oficinas, clínicas de estética e prestadores de serviço de Belo Horizonte. Preço fechado a partir de R$ 250.">
+<meta name="theme-color" content="#0f172a">
+<link rel="canonical" href="https://www.leontech.dev.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.leontech.dev.br/">
+<meta property="og:title" content="LeonTech — Páginas que viram pedidos no WhatsApp">
+<meta property="og:description" content="Para negócios de BH: página no Google, pedido no WhatsApp e planilha com cada pedido. Veja a demo e os preços.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231d4ed8'/%3E%3Cpath d='M13 4 6 14h5l-1 6 7-10h-5l1-6z' fill='%23fff'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "LeonTech",
+  "url": "https://www.leontech.dev.br/",
+  "telephone": "+55 31 99286-8113",
+  "description": "Páginas que transformam busca no Google em pedido no WhatsApp, para negócios locais de Belo Horizonte.",
+  "areaServed": [{ "@type": "City", "name": "Belo Horizonte" }, { "@type": "City", "name": "Contagem" }],
+  "priceRange": "R$ 150 – R$ 1.390"
+}
+</script>
+<style>
+  /* Mesmo visual da landing (landing/index.html), sem JavaScript. */
+  :root {
+    --cor: #1d4ed8; --cor-escura: #1e3a8a; --cor-clara: #dbeafe;
+    --fundo: #f6f7fb; --cartao: #ffffff; --texto: #0f172a; --suave: #4b5563; --fraco: #64748b;
+    --borda: #e5e7eb; --ok: #15803d; --whats: #128c7e; --raio: 18px;
+    --sombra: 0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.08);
+    --sombra-forte: 0 2px 4px rgba(15,23,42,.06), 0 24px 48px rgba(15,23,42,.16);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--texto); background: var(--fundo); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: var(--cor-escura); }
+  h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.15; }
+  .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 16px; }
+  .ico { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  [id] { scroll-margin-top: 86px; }
+  .pular { position: absolute; left: -9999px; }
+  .pular:focus { left: 16px; top: 12px; z-index: 50; background: #fff; padding: 10px 14px; border-radius: 10px; box-shadow: var(--sombra-forte); }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 22px; border-radius: 12px; border: 0; font: inherit; font-weight: 650; text-decoration: none; cursor: pointer; transition: transform .12s, box-shadow .2s, filter .15s; }
+  .btn .ico { font-size: 18px; }
+  .btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
+  .btn:active { transform: translateY(0) scale(.99); }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--cor); outline-offset: 3px; }
+  .btn-primario { background: var(--cor); color: #fff; box-shadow: 0 8px 20px -6px var(--cor); }
+  .btn-whats { background: var(--whats); color: #fff; box-shadow: 0 8px 20px -8px var(--whats); }
+  .btn-claro { background: #fff; color: var(--cor-escura); }
+  .btn-contorno { background: #fff; color: var(--texto); border: 1.5px solid var(--borda); }
+
+  /* Cabeçalho */
+  header.topo { background: rgba(255,255,255,.88); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--borda); position: sticky; top: 0; z-index: 10; }
+  header.topo .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .marca { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: var(--texto); text-decoration: none; min-width: 0; }
+  .marca-ico { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: linear-gradient(135deg, var(--cor), var(--cor-escura)); color: #fff; font-size: 20px; flex: none; }
+  .menu { display: flex; gap: 22px; font-size: 15px; }
+  .menu a { color: var(--suave); text-decoration: none; font-weight: 550; }
+  .menu a:hover { color: var(--texto); }
+  header.topo .btn { padding: 10px 16px; font-size: 15px; }
+
+  /* Hero */
+  .hero { position: relative; overflow: hidden; padding: 64px 0 72px;
+    background: radial-gradient(1000px 500px at 85% -10%, var(--cor-clara), transparent 60%), radial-gradient(700px 400px at -10% 110%, var(--cor-clara), transparent 60%), var(--fundo); }
+  .hero .container { display: grid; grid-template-columns: 1.08fr .92fr; gap: 48px; align-items: center; }
+  .selo { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--borda); border-radius: 999px; padding: 6px 14px 6px 8px; font-size: 14px; font-weight: 600; color: var(--suave); box-shadow: var(--sombra); margin-bottom: 18px; }
+  .selo .ponto { width: 22px; height: 22px; border-radius: 50%; background: var(--cor-clara); color: var(--cor-escura); display: grid; place-items: center; font-size: 13px; }
+  .hero h1 { font-size: clamp(30px, 4.6vw, 54px); margin: 0 0 16px; }
+  .hero p.sub { font-size: clamp(17px, 1.6vw, 19px); color: var(--suave); margin: 0 0 26px; max-width: 560px; }
+  .hero .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; }
+  .hero .nota { font-size: 15px; color: var(--suave); margin: 0; }
+
+  /* Ilustração do hero */
+  .ilustracao { position: relative; aspect-ratio: 1 / .9; max-width: 480px; justify-self: center; width: 100%; }
+  .ilustracao .placa { position: absolute; inset: 6% 4% 6% 10%; border-radius: 32px; background: linear-gradient(145deg, var(--cor), var(--cor-escura)); box-shadow: var(--sombra-forte); overflow: hidden; }
+  .ilustracao .placa::before, .ilustracao .placa::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); }
+  .ilustracao .placa::before { width: 70%; aspect-ratio: 1; right: -18%; top: -22%; }
+  .ilustracao .placa::after { width: 45%; aspect-ratio: 1; left: -12%; bottom: -16%; }
+  .ilustracao .grande { position: absolute; left: 50%; top: 47%; transform: translate(-45%, -50%); width: 38%; aspect-ratio: 1; border-radius: 30%; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); display: grid; place-items: center; color: #fff; font-size: clamp(60px, 9vw, 104px); }
+  .ilustracao .grande .ico { stroke-width: 1.6; }
+  .notif { position: absolute; display: flex; align-items: center; gap: 12px; background: #fff; border-radius: 16px; padding: 12px 16px; box-shadow: var(--sombra-forte); font-size: 14px; max-width: 78%; }
+  .notif .bolha { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; font-size: 19px; flex: none; }
+  .notif b { display: block; font-size: 14px; color: var(--texto); }
+  .notif small { color: var(--fraco); font-size: 12.5px; }
+  .notif.n1 { left: 0; top: 10%; animation: flutuar 6s ease-in-out infinite; }
+  .notif.n1 .bolha { background: var(--cor-clara); color: var(--cor-escura); }
+  .notif.n2 { right: 0; bottom: 9%; animation: flutuar 6s ease-in-out -3s infinite; }
+  .notif.n2 .bolha { background: #dcfce7; color: #15803d; }
+  @keyframes flutuar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @media (prefers-reduced-motion: reduce) { .notif { animation: none !important; } html { scroll-behavior: auto; } .btn { transition: none; } }
+
+  /* Faixa de destaques */
+  .faixa { margin-top: -28px; position: relative; z-index: 2; }
+  .destaques { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .destaques li { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--borda); border-radius: 16px; padding: 16px 18px; box-shadow: var(--sombra); font-weight: 600; }
+  .destaques li .ico { width: 34px; height: 34px; padding: 8px; border-radius: 10px; background: var(--cor-clara); color: var(--cor-escura); stroke-width: 2.5; }
+
+  /* Seções */
+  section { padding: 80px 0; }
+  .cabecalho { max-width: 640px; margin-bottom: 36px; }
+  .rotulo { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--cor); margin-bottom: 8px; }
+  section h2.titulo { font-size: clamp(26px, 3.2vw, 38px); margin: 0 0 10px; }
+  section p.lead { color: var(--suave); margin: 0; font-size: 17px; }
+  .grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 18px; }
+  .item { background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; box-shadow: var(--sombra); }
+  .item h3 { margin: 0 0 6px; font-size: 18px; }
+  .item p { margin: 0; color: var(--suave); }
+  .item .icone-servico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, var(--cor-clara), #fff); color: var(--cor-escura); font-size: 24px; margin-bottom: 16px; border: 1px solid var(--cor-clara); }
+  .alt { background: var(--cartao); border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); }
+  .passos { counter-reset: passo; }
+  .passos .item { box-shadow: none; background: var(--fundo); }
+  .passos .item h3::before { counter-increment: passo; content: counter(passo); display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--cor); color: #fff; margin-right: 12px; font-size: 15px; vertical-align: middle; box-shadow: 0 6px 14px -6px var(--cor); }
+
+  /* Quem é */
+  .sobre .container { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+  .sobre .texto p { color: var(--suave); font-size: 17px; margin: 0 0 14px; }
+  .sobre .texto p strong { color: var(--texto); }
+  .motivos { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .motivos li { display: flex; gap: 12px; align-items: flex-start; color: var(--suave); background: var(--cartao); border: 1px solid var(--borda); border-radius: 16px; padding: 16px 18px; box-shadow: var(--sombra); }
+  .motivos li .ico { width: 30px; height: 30px; padding: 6px; border-radius: 9px; background: var(--cor-clara); color: var(--cor-escura); }
+  .motivos b { color: var(--texto); display: block; }
+
+  /* Pacotes */
+  .pacotes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
+  .pacote { display: flex; flex-direction: column; background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; box-shadow: var(--sombra); position: relative; }
+  .pacote.destaque { border: 2px solid var(--cor); box-shadow: var(--sombra-forte); }
+  .pacote .tag { position: absolute; top: -12px; left: 24px; background: var(--cor); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; }
+  .pacote .tag.leve { background: var(--cor-clara); color: var(--cor-escura); }
+  .pacote h3 { margin: 4px 0 4px; font-size: 19px; }
+  .pacote .para { color: var(--suave); font-size: 15px; margin: 0 0 14px; }
+  .pacote .preco { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; margin: 0 0 4px; }
+  .pacote .preco small { font-size: 16px; font-weight: 600; color: var(--suave); }
+  .pacote .prazo { color: var(--fraco); font-size: 14px; margin: 0 0 16px; }
+  .pacote ul { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 8px; font-size: 15px; color: var(--suave); }
+  .pacote ul li { display: flex; gap: 8px; align-items: flex-start; }
+  .pacote ul li .ico { color: var(--ok); margin-top: 4px; stroke-width: 2.6; }
+  .pacote .btn { margin-top: auto; width: 100%; padding: 12px 16px; }
+  .letras { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .letras .item { box-shadow: none; background: var(--fundo); font-size: 15px; }
+  .letras .item h3 { font-size: 16px; }
+
+  /* Demo */
+  .demo-caixa { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; background: var(--cartao); border: 1px solid var(--borda); border-radius: 24px; padding: 36px; box-shadow: var(--sombra-forte); }
+  .demo-caixa h2 { margin: 0 0 10px; }
+  .demo-caixa .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .nichos { display: flex; flex-wrap: wrap; gap: 8px; }
+  .nichos a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: var(--fundo); border: 1px solid var(--borda); color: var(--texto); text-decoration: none; font-size: 15px; font-weight: 550; }
+  .nichos a:hover { border-color: var(--cor); color: var(--cor-escura); }
+  .nichos-titulo { font-size: 14px; font-weight: 700; color: var(--fraco); margin: 0 0 10px; }
+
+  /* Portfólio (vazio até haver clientes reais) */
+  .vazio { border: 2px dashed #cbd5e1; border-radius: var(--raio); padding: 36px 24px; text-align: center; background: var(--fundo); }
+  .vazio .icone-servico { margin: 0 auto 14px; width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--cor-clara); color: var(--cor-escura); font-size: 24px; }
+  .vazio h3 { margin: 0 0 6px; font-size: 19px; }
+  .vazio p { margin: 0 auto 18px; color: var(--suave); max-width: 560px; }
+  .projeto figure { margin: -24px -24px 18px; aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--raio) var(--raio) 0 0; background: var(--cor-clara); }
+  .projeto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .depoimento blockquote { margin: 0 0 12px; color: var(--texto); }
+  .depoimento cite { font-style: normal; color: var(--fraco); font-size: 14px; }
+
+  /* Dúvidas */
+  .duvidas .container { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; }
+  details { background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; box-shadow: var(--sombra); }
+  details summary { font-weight: 650; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--cor); transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 10px 0 0; color: var(--suave); }
+
+  .cta-final { padding: 80px 0; }
+  .cta-final .caixa { position: relative; overflow: hidden; border-radius: 28px; padding: 56px 32px; text-align: center; color: #fff; background: linear-gradient(135deg, var(--cor), var(--cor-escura)); box-shadow: var(--sombra-forte); }
+  .cta-final .caixa::after { content: ""; position: absolute; width: 420px; aspect-ratio: 1; border-radius: 50%; right: -120px; top: -180px; background: rgba(255,255,255,.08); }
+  .cta-final h2 { font-size: clamp(26px, 3.4vw, 40px); margin: 0 0 10px; position: relative; }
+  .cta-final p { opacity: .9; margin: 0 0 24px; position: relative; }
+  .cta-final .acoes { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+  footer { background: #0b1220; color: #cbd5e1; font-size: 14px; padding: 48px 0 96px; }
+  footer .colunas { display: grid; grid-template-columns: 1.2fr 1fr 1.6fr; gap: 32px; }
+  footer h3 { color: #fff; font-size: 15px; margin: 0 0 10px; }
+  footer p { margin: 0 0 8px; }
+  footer a { color: #e2e8f0; }
+  footer .marca { color: #fff; margin-bottom: 10px; }
+  footer .direitos { margin-top: 24px; padding-top: 16px; border-top: 1px solid #1e293b; color: #94a3b8; }
+
+  .whats-flutuante { position: fixed; right: 16px; bottom: 16px; z-index: 20; width: 58px; height: 58px; padding: 0; border-radius: 50%; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+  .whats-flutuante .ico { font-size: 26px; }
+
+  [hidden] { display: none !important; }
+
+  @media (max-width: 1080px) {
+    .pacotes { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+  }
+  @media (max-width: 960px) {
+    .menu { display: none; }
+    .hero { padding: 40px 0 64px; }
+    .hero .container, .sobre .container, .duvidas .container, .demo-caixa { grid-template-columns: 1fr; gap: 32px; }
+    .ilustracao { max-width: 420px; }
+    .destaques { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+    footer .colunas { grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 640px) {
+    .pacotes, .letras { grid-template-columns: 1fr; }
+    .demo-caixa { padding: 24px 18px; }
+  }
+  @media (max-width: 560px) {
+    header.topo .btn span.txt { display: none; }
+    .hero .acoes .btn, .demo-caixa .acoes .btn { flex: 1 1 100%; }
+    .notif { padding: 10px 12px; font-size: 13px; }
+    .notif .bolha { width: 32px; height: 32px; font-size: 16px; }
+    .cta-final .caixa { padding: 44px 20px; }
+    .vazio { padding: 28px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ícones (mesmo desenho dos ícones de landing/nichos.js) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-conversa" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-mapa" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.4 3.4 7.9 8 9 4.6-1.1 8-4.6 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-sino" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+  <symbol id="i-tabela" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
+  <symbol id="i-tela" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-pasta" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="container">
+    <a class="marca" href="#"><span class="marca-ico"><svg class="ico"><use href="#i-raio"/></svg></span><span>LeonTech</span></a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#pacotes">Pacotes</a>
+      <a href="#demo">Demo</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-whats" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico"><use href="#i-conversa"/></svg><span class="txt">WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <div class="hero">
+    <div class="container">
+      <div>
+        <div class="selo"><span class="ponto"><svg class="ico"><use href="#i-mapa"/></svg></span>Belo Horizonte e região</div>
+        <h1>Páginas que transformam busca no Google em pedido no WhatsApp</h1>
+        <p class="sub">Para oficinas, clínicas de estética e prestadores de serviço de BH. O cliente acha você no Google, pede o orçamento em menos de um minuto e o pedido chega no seu WhatsApp e numa planilha.</p>
+        <div class="acoes">
+          <a class="btn btn-primario" href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Ver a demo funcionando<svg class="ico"><use href="#i-seta"/></svg></a>
+          <a class="btn btn-whats" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener"><svg class="ico"><use href="#i-conversa"/></svg>Falar no WhatsApp</a>
+        </div>
+        <p class="nota">Preço fechado, a partir de R$ 250. Manutenção mensal só se você quiser.</p>
+      </div>
+
+      <div class="ilustracao" aria-hidden="true">
+        <div class="placa"><div class="grande"><svg class="ico"><use href="#i-conversa"/></svg></div></div>
+        <div class="notif n1"><span class="bolha"><svg class="ico"><use href="#i-sino"/></svg></span><span><b>Novo pedido de orçamento</b><small>pelo site · exemplo</small></span></div>
+        <div class="notif n2"><span class="bolha"><svg class="ico"><use href="#i-tabela"/></svg></span><span><b>Anotado na planilha</b><small>origem: Google · exemplo</small></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faixa">
+    <div class="container">
+      <ul class="destaques">
+        <li><svg class="ico"><use href="#i-check"/></svg>Página com o nome do seu negócio</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Pedido direto no seu WhatsApp</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>Planilha com cada pedido e a origem</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="texto">
+        <span class="rotulo">Quem é a LeonTech</span>
+        <h2 class="titulo">Um desenvolvedor de BH cuidando do seu Google e do seu WhatsApp</h2>
+        <!-- Quando quiser, acrescente aqui seu nome e uma foto sua: aumenta a confiança. -->
+        <p>A LeonTech é o meu trabalho: sou desenvolvedor aqui em Belo Horizonte e atendo cada cliente pessoalmente, do primeiro contato até a página no ar.</p>
+        <p>O dono de oficina ou de clínica não precisa de “site bonito”. Precisa que <strong>quem procura no Google consiga pedir um orçamento</strong> e que <strong>nenhum pedido se perca</strong> no WhatsApp. É isso que eu monto.</p>
+        <p>Sem contrato longo e sem promessa milagrosa: preço fechado, prazo combinado e você vê os pedidos chegando.</p>
+      </div>
+      <ul class="motivos">
+        <li><svg class="ico"><use href="#i-mapa"/></svg><span><b>Daqui de BH</b>Atendo Belo Horizonte e Contagem, presencialmente ou pelo WhatsApp.</span></li>
+        <li><svg class="ico"><use href="#i-relogio"/></svg><span><b>Entrega rápida</b>De 2 a 5 dias úteis, conforme o pacote.</span></li>
+        <li><svg class="ico"><use href="#i-escudo"/></svg><span><b>Tudo no seu nome</b>Domínio, planilha e perfil no Google ficam com você.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="alt" id="como-funciona">
+    <div class="container">
+      <div class="cabecalho">
+        <span class="rotulo">O que eu faço</span>
+        <h2 class="titulo">Da busca no Google ao pedido no seu WhatsApp</h2>
+        <p class="lead">Uma página simples, rápida no celular e feita para uma coisa só: virar pedido.</p>
+      </div>
+      <div class="grade passos">
+        <div class="item"><h3>O cliente procura</h3><p>Ele busca “oficina perto de mim” ou “limpeza de pele em BH” e encontra o seu negócio no Google.</p></div>
+        <div class="item"><h3>Abre a sua página</h3><p>Vê seus serviços, o bairro e o horário, e pede o orçamento pelo formulário ou pelo botão do WhatsApp.</p></div>
+        <div class="item"><h3>O pedido chega até você</h3><p>Nome, telefone e serviço chegam no WhatsApp e ficam anotados numa planilha com a origem de cada pedido.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pacotes">
+    <div class="container">
+      <div class="cabecalho">
+        <span class="rotulo">Pacotes</span>
+        <h2 class="titulo">Preço claro, sem surpresa</h2>
+        <p class="lead">Escolha por onde começar. Dá para começar pelo Perfil no Google e subir depois.</p>
+      </div>
+      <div class="pacotes">
+        <article class="pacote">
+          <span class="tag leve">Porta de entrada</span>
+          <h3>Perfil no Google</h3>
+          <p class="para">Para aparecer melhor no Google Maps.</p>
+          <p class="preco">R$ 250</p>
+          <p class="prazo">Entrega em 2 dias</p>
+          <ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Categorias, serviços e horários</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Fotos e link do WhatsApp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Respostas às avaliações</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Roteiro para pedir avaliações</li>
+          </ul>
+          <a class="btn btn-contorno" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20pacote%20Perfil%20no%20Google%20(R%24%20250)." target="_blank" rel="noopener">Quero este</a>
+        </article>
+        <article class="pacote destaque">
+          <span class="tag">Página + WhatsApp</span>
+          <h3>Essencial</h3>
+          <p class="para">Sua página para receber pedidos.</p>
+          <p class="preco">R$ 790</p>
+          <p class="prazo">Entrega em 3 dias úteis</p>
+          <ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Página no seu domínio</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Botão de WhatsApp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Formulário que grava numa planilha</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Aviso por e-mail a cada pedido</li>
+          </ul>
+          <a class="btn btn-primario" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20pacote%20Essencial%20(R%24%20790)." target="_blank" rel="noopener">Quero este</a>
+        </article>
+        <article class="pacote">
+          <span class="tag leve">Mais completo</span>
+          <h3>Completo</h3>
+          <p class="para">Página, Google e números na mão.</p>
+          <p class="preco">R$ 1.390</p>
+          <p class="prazo">Entrega em 5 dias úteis</p>
+          <ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Tudo do Essencial</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Perfil no Google incluso</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Painel com os pedidos (Looker Studio)</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Medição pronta para anúncios (GA4 e UTMs)</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>1 h de treinamento</li>
+          </ul>
+          <a class="btn btn-contorno" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20pacote%20Completo%20(R%24%201.390)." target="_blank" rel="noopener">Quero este</a>
+        </article>
+        <article class="pacote">
+          <span class="tag leve">Opcional</span>
+          <h3>Manutenção</h3>
+          <p class="para">Para quem não quer se preocupar.</p>
+          <p class="preco">R$ 150<small>/mês</small></p>
+          <p class="prazo">Sem fidelidade · aviso de 30 dias</p>
+          <ul>
+            <li><svg class="ico"><use href="#i-check"/></svg>Ajustes de texto e preço</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Conferência de funcionamento</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Relatório mensal de pedidos</li>
+          </ul>
+          <a class="btn btn-contorno" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20da%20Manuten%C3%A7%C3%A3o%20mensal%20(R%24%20150%2Fm%C3%AAs)." target="_blank" rel="noopener">Quero este</a>
+        </article>
+      </div>
+      <div class="letras">
+        <div class="item"><h3>Como é o pagamento</h3><p>50% no aceite da proposta, por Pix, e 50% na entrega, depois que você aprovar.</p></div>
+        <div class="item"><h3>O que não está incluso</h3><p>Domínio (cerca de R$ 40/ano, registrado no seu nome), verba de anúncios e fotos profissionais. Nenhuma página garante quantidade de clientes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="demo">
+    <div class="container">
+      <div class="demo-caixa">
+        <div>
+          <span class="rotulo">Demo</span>
+          <h2 class="titulo">Veja funcionando antes de decidir</h2>
+          <p class="lead">A demo mostra a página de um negócio fictício, com formulário e botão de WhatsApp de verdade. Troque o tipo de negócio no topo dela.</p>
+          <div class="acoes">
+            <a class="btn btn-primario" href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Abrir a demo<svg class="ico"><use href="#i-seta"/></svg></a>
+            <a class="btn btn-contorno" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Quero%20uma%20pr%C3%A9via%20gr%C3%A1tis%20com%20o%20nome%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir prévia grátis com o meu nome</a>
+          </div>
+        </div>
+        <div>
+          <p class="nichos-titulo">Exemplos prontos:</p>
+          <div class="nichos">
+            <a href="https://demo.leontech.dev.br/?nicho=oficina" target="_blank" rel="noopener">Oficina mecânica</a>
+            <a href="https://demo.leontech.dev.br/?nicho=estetica" target="_blank" rel="noopener">Clínica de estética</a>
+            <a href="https://demo.leontech.dev.br/?nicho=barbearia" target="_blank" rel="noopener">Barbearia</a>
+            <a href="https://demo.leontech.dev.br/?nicho=desentupidora" target="_blank" rel="noopener">Desentupidora</a>
+            <a href="https://demo.leontech.dev.br/?nicho=arcondicionado" target="_blank" rel="noopener">Ar-condicionado</a>
+            <a href="https://demo.leontech.dev.br/?nicho=chaveiro" target="_blank" rel="noopener">Chaveiro</a>
+            <a href="https://demo.leontech.dev.br/?nicho=petshop" target="_blank" rel="noopener">Pet shop</a>
+            <a href="https://demo.leontech.dev.br/?nicho=celular" target="_blank" rel="noopener">Assistência de celular</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="cabecalho">
+        <span class="rotulo">Portfólio</span>
+        <h2 class="titulo">Clientes e resultados</h2>
+        <p class="lead">Aqui entram só projetos reais, com autorização de cada cliente.</p>
+      </div>
+
+      <!-- Estado vazio: apague este bloco quando publicar o primeiro projeto real. -->
+      <div class="vazio">
+        <div class="icone-servico"><svg class="ico"><use href="#i-pasta"/></svg></div>
+        <h3>Os primeiros projetos chegam em breve</h3>
+        <p>A LeonTech está começando agora, e eu prefiro mostrar a demo a inventar depoimento. Quer ser um dos primeiros negócios desta lista?</p>
+        <a class="btn btn-whats" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener"><svg class="ico"><use href="#i-conversa"/></svg>Chamar no WhatsApp</a>
+      </div>
+
+      <!--
+        MODELO para quando houver cliente real (com autorização por escrito para usar nome, imagem e números).
+        Tire o atributo hidden da grade e copie um bloco por projeto. Nunca invente depoimento ou número.
+
+      <div class="grade" hidden>
+        <article class="item projeto">
+          <figure><img src="portfolio/nome-do-cliente.jpg" alt="Página da [Empresa] no celular" loading="lazy" width="800" height="500"></figure>
+          <h3>[Empresa] · [bairro]</h3>
+          <p>[O que foi feito] · <a href="https://[site-do-cliente]" target="_blank" rel="noopener">ver página</a></p>
+        </article>
+        <article class="item depoimento">
+          <blockquote>“[Frase do cliente, exatamente como ele escreveu]”</blockquote>
+          <cite>[Nome], [Empresa] · avaliação no Google</cite>
+        </article>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <section class="alt duvidas" id="duvidas">
+    <div class="container">
+      <div class="cabecalho">
+        <span class="rotulo">Dúvidas</span>
+        <h2 class="titulo">Perguntas frequentes</h2>
+        <p class="lead">Não achou sua dúvida? Pergunte pelo WhatsApp.</p>
+      </div>
+      <div>
+        <details><summary>Preciso já ter site ou domínio?</summary><p>Não. Se você ainda não tem domínio, eu ajudo a registrar no seu nome (cerca de R$ 40 por ano, pago direto ao Registro.br). Ele fica sempre com você.</p></details>
+        <details><summary>Tem mensalidade obrigatória?</summary><p>Não. Os pacotes têm preço fechado. A manutenção de R$ 150/mês é opcional e pode ser cancelada a qualquer momento, com aviso de 30 dias.</p></details>
+        <details><summary>Dá para garantir primeira página do Google ou número de clientes?</summary><p>Não, e desconfie de quem garante. O que eu entrego é o seu negócio bem apresentado no Google e um caminho fácil para o cliente pedir, com cada pedido anotado para você acompanhar.</p></details>
+        <details><summary>Quanto tempo leva?</summary><p>Perfil no Google em 2 dias, Essencial em 3 dias úteis e Completo em 5 dias úteis, contando a partir do envio das informações e da primeira parcela.</p></details>
+        <details><summary>Como funciona o pagamento?</summary><p>50% por Pix no aceite da proposta e 50% na entrega, depois que você conferir e aprovar.</p></details>
+        <details><summary>Posso ver antes de fechar?</summary><p>Pode. Abra a demo ou peça pelo WhatsApp uma prévia grátis com o nome do seu negócio, sem compromisso.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <div class="caixa">
+        <h2>Vamos colocar seu negócio para receber pedidos?</h2>
+        <p>Me chame no WhatsApp. Respondo pessoalmente.</p>
+        <div class="acoes">
+          <a class="btn btn-claro" href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Ver a demo</a>
+          <a class="btn btn-whats" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener"><svg class="ico"><use href="#i-conversa"/></svg>WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="colunas">
+      <div>
+        <div class="marca"><span class="marca-ico"><svg class="ico"><use href="#i-raio"/></svg></span><strong>LeonTech</strong></div>
+        <p>Páginas e Google para negócios de Belo Horizonte.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>WhatsApp: <a href="https://wa.me/5531992868113" target="_blank" rel="noopener">(31) 99286-8113</a></p>
+        <p>Belo Horizonte e Contagem/MG</p>
+        <p><a href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">demo.leontech.dev.br</a></p>
+      </div>
+      <div>
+        <h3>Privacidade</h3>
+        <p>Esta página não tem formulário, não usa cookies e não coleta dados. O contato acontece só pelo WhatsApp, quando você decide chamar.</p>
+      </div>
+    </div>
+    <p class="direitos">© 2026 LeonTech · Belo Horizonte/MG</p>
+  </div>
+</footer>
+
+<a class="btn btn-whats whats-flutuante" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ico"><use href="#i-conversa"/></svg></a>
+
+</body>
+</html>
