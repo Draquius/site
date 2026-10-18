@@ -6,7 +6,7 @@
 if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br') location.replace('https://' + location.host + location.pathname + location.search + location.hash);</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LeonTech — Tecnologia e Soluções Digitais · Páginas que viram pedidos no WhatsApp</title>
-<meta name="description" content="Páginas que transformam busca no Google em pedido no WhatsApp, para oficinas, clínicas de estética e prestadores de serviço. Atendimento remoto em todo o Brasil. Preço fechado a partir de R$ 250.">
+<meta name="description" content="Perfil no Google, páginas e sites que viram pedido no WhatsApp, agenda online, catálogo com pedido, sistema de orçamentos, e-mail profissional e WhatsApp Business para pequenos negócios. Atendimento em todo o Brasil. Preço fechado a partir de R$ 180.">
 <meta name="theme-color" content="#081e4a">
 <link rel="canonical" href="https://www.leontech.dev.br/">
 <meta property="og:type" content="website">
@@ -33,9 +33,27 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
   "logo": "https://www.leontech.dev.br/marca/leontech-principal.png",
   "image": "https://www.leontech.dev.br/marca/og-image.png",
   "telephone": "+55 31 99286-8113",
-  "description": "Páginas que transformam busca no Google em pedido no WhatsApp. Atendimento remoto em todo o Brasil, com base em Belo Horizonte.",
+  "email": "contato@leontech.dev.br",
+  "description": "Perfil no Google, páginas que transformam busca em pedido no WhatsApp, sistema de orçamentos e ordens de serviço, e-mail profissional e WhatsApp Business. Atendimento remoto em todo o Brasil, com base em Belo Horizonte.",
   "areaServed": { "@type": "Country", "name": "Brasil" },
-  "priceRange": "R$ 150 – R$ 1.390"
+  "priceRange": "R$ 150 – R$ 1.490",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Soluções LeonTech",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Perfil no Google" }, "price": "250", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Página Essencial" }, "price": "790", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pacote Completo" }, "price": "1390", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistema de orçamentos e ordens de serviço (implantação)" }, "price": "1190", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site institucional" }, "price": "1490", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Agenda com confirmação (implantação)" }, "price": "990", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Catálogo com pedido no WhatsApp" }, "price": "690", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-mail com domínio próprio" }, "price": "200", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WhatsApp Business organizado" }, "price": "180", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reputação no Google (mensal)" }, "price": "150", "priceCurrency": "BRL" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção mensal" }, "price": "150", "priceCurrency": "BRL" }
+    ]
+  }
 }
 </script>
 <style>
@@ -163,6 +181,27 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
   .letras .item { box-shadow: none; background: var(--fundo); font-size: 15px; }
   .letras .item h3 { font-size: 16px; }
 
+  /* Soluções (tudo o que a LeonTech vende, por necessidade) */
+  .solucoes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .grupo { background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; box-shadow: var(--sombra); }
+  .grupo h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-size: 19px; }
+  .grupo h3 .ico { width: 34px; height: 34px; padding: 7px; border-radius: 10px; background: var(--cor-clara); color: var(--cor-escura); }
+  .grupo > p { margin: 0 0 14px; color: var(--suave); font-size: 15px; }
+  .servicos { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .servicos li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: baseline; padding: 12px 14px; border-radius: 12px; background: var(--fundo); border: 1px solid var(--borda); }
+  .servicos b { font-size: 16px; }
+  .servicos .valor { font-weight: 800; white-space: nowrap; color: var(--cor-escura); }
+  .servicos .valor small { font-weight: 600; color: var(--suave); }
+  .servicos .desc { grid-column: 1 / -1; color: var(--suave); font-size: 14.5px; }
+  .servicos .links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 14px; font-size: 14.5px; font-weight: 650; }
+  .servicos .links a { color: var(--cor); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .servicos .links a:hover { text-decoration: underline; }
+  .demos { margin-top: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .demo-extra { display: flex; flex-direction: column; justify-content: space-between; gap: 14px; background: var(--cartao); border: 1px solid var(--borda); border-radius: 20px; padding: 22px 24px; box-shadow: var(--sombra); }
+  .demo-extra .btn { align-self: flex-start; padding: 10px 16px; }
+  .demo-extra h3 { margin: 0 0 4px; font-size: 19px; }
+  .demo-extra p { margin: 0; color: var(--suave); }
+
   /* Demo */
   .demo-caixa { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; background: var(--cartao); border: 1px solid var(--borda); border-radius: 24px; padding: 36px; box-shadow: var(--sombra-forte); }
   .demo-caixa h2 { margin: 0 0 10px; }
@@ -225,7 +264,8 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
     footer .colunas { grid-template-columns: 1fr; gap: 24px; }
   }
   @media (max-width: 640px) {
-    .pacotes, .letras { grid-template-columns: 1fr; }
+    .pacotes, .letras, .solucoes { grid-template-columns: 1fr; }
+    .demos { grid-template-columns: 1fr; }
     .demo-caixa { padding: 24px 18px; }
   }
   @media (max-width: 560px) {
@@ -252,6 +292,10 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
   <symbol id="i-tabela" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
   <symbol id="i-pasta" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
   <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-tela" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-engrenagem" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-mais" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
 </svg>
 
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -261,6 +305,7 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
     <a class="marca" href="#"><img src="marca/leontech-lettering.png" alt="LeonTech" width="164" height="36"></a>
     <nav class="menu" aria-label="Seções">
       <a href="#como-funciona">Como funciona</a>
+      <a href="#solucoes">Soluções</a>
       <a href="#pacotes">Pacotes</a>
       <a href="#demo">Demo</a>
       <a href="#duvidas">Dúvidas</a>
@@ -280,7 +325,7 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
           <a class="btn btn-primario" href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Ver a demo funcionando<svg class="ico"><use href="#i-seta"/></svg></a>
           <a class="btn btn-whats" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20mais." target="_blank" rel="noopener"><svg class="ico ico-wa" aria-hidden="true"><use href="#i-whatsapp"/></svg>Falar no WhatsApp</a>
         </div>
-        <p class="nota">Preço fechado, a partir de R$ 250. Manutenção mensal só se você quiser.</p>
+        <p class="nota">Também faço Perfil no Google, site institucional, agenda online, catálogo com pedido, sistema de orçamentos, e-mail profissional e WhatsApp Business. <a href="#solucoes">Ver todas as soluções</a></p>
       </div>
 
       <div class="ilustracao" aria-hidden="true">
@@ -334,7 +379,76 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
     </div>
   </section>
 
-  <section id="pacotes">
+  <section id="solucoes">
+    <div class="container">
+      <div class="cabecalho">
+        <span class="rotulo">Soluções</span>
+        <h2 class="titulo">Tudo o que o seu negócio precisa para vender mais pela internet</h2>
+        <p class="lead">Comece pelo que faz mais falta hoje. Cada serviço tem preço fechado e pode ser combinado com os outros.</p>
+      </div>
+      <div class="solucoes">
+        <article class="grupo">
+          <h3><svg class="ico"><use href="#i-mapa"/></svg>Aparecer no Google</h3>
+          <p>Para quem procura o seu serviço encontrar você e confiar.</p>
+          <ul class="servicos">
+            <li><b>Perfil no Google</b><span class="valor">R$ 250</span>
+              <span class="desc">Perfil da Empresa completo: categorias, serviços, horários, fotos, WhatsApp e respostas às avaliações. Entrega em 2 dias.</span>
+              <span class="links"><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20Perfil%20no%20Google." target="_blank" rel="noopener">Quero este</a></span></li>
+            <li><b>Reputação no Google</b><span class="valor">R$ 150<small>/mês</small></span>
+              <span class="desc">Todo mês: respondo as avaliações novas, envio a mensagem para você pedir avaliação aos clientes satisfeitos e um relatório simples.</span>
+              <span class="links"><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20da%20Reputa%C3%A7%C3%A3o%20no%20Google." target="_blank" rel="noopener">Quero este</a></span></li>
+          </ul>
+        </article>
+        <article class="grupo">
+          <h3><svg class="ico"><use href="#i-tela"/></svg>Página que vira pedido</h3>
+          <p>Para transformar a visita em pedido de orçamento no WhatsApp.</p>
+          <ul class="servicos">
+            <li><b>Página Essencial</b><span class="valor">R$ 790</span>
+              <span class="desc">Página no seu domínio, botão de WhatsApp, formulário que grava numa planilha e aviso por e-mail. 3 dias úteis.</span>
+              <span class="links"><a href="#pacotes">Ver detalhes</a><a href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Ver demo</a></span></li>
+            <li><b>Pacote Completo</b><span class="valor">R$ 1.390</span>
+              <span class="desc">Tudo do Essencial, Perfil no Google, painel de pedidos, medição para anúncios e 1 h de treinamento. 5 dias úteis.</span>
+              <span class="links"><a href="#pacotes">Ver detalhes</a></span></li>
+            <li><b>Site institucional</b><span class="valor">R$ 1.490</span>
+              <span class="desc">Até 5 páginas (início, sobre, serviços, galeria e contato), com formulário que chega no seu WhatsApp. 7 a 10 dias úteis.</span>
+              <span class="links"><a href="https://demo.leontech.dev.br/site-modelo/" target="_blank" rel="noopener">Ver modelo</a><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20site%20institucional." target="_blank" rel="noopener">Quero este</a></span></li>
+          </ul>
+        </article>
+        <article class="grupo">
+          <h3><svg class="ico"><use href="#i-engrenagem"/></svg>Sistemas para o dia a dia</h3>
+          <p>Para organizar o trabalho e não perder dinheiro esquecido no caderno.</p>
+          <ul class="servicos">
+            <li><b>Orçamentos e ordens de serviço</b><span class="valor">R$ 1.190<small> + R$ 150/mês</small></span>
+              <span class="desc">Orçamento com a sua marca enviado pelo WhatsApp, andamento de cada serviço (aprovado, em execução, pronto, entregue), aviso de serviço pronto e o faturamento do mês. Funciona no celular.</span>
+              <span class="links"><a href="https://demo.leontech.dev.br/sistema-os/" target="_blank" rel="noopener">Ver demo</a><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20sistema%20de%20or%C3%A7amentos%20e%20OS." target="_blank" rel="noopener">Quero este</a></span></li>
+            <li><b>Agenda com confirmação</b><span class="valor">R$ 990<small> + R$ 150/mês</small></span>
+              <span class="desc">O cliente escolhe serviço, profissional e horário livre; você confirma e manda lembrete pelo WhatsApp e acompanha as faltas. Para salão, barbearia, estética e pet.</span>
+              <span class="links"><a href="https://demo.leontech.dev.br/agenda/" target="_blank" rel="noopener">Ver demo</a><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20da%20agenda%20com%20confirma%C3%A7%C3%A3o." target="_blank" rel="noopener">Quero este</a></span></li>
+            <li><b>Catálogo com pedido no WhatsApp</b><span class="valor">R$ 690</span>
+              <span class="desc">Seus produtos com preço; o cliente monta o pedido (entrega ou retirada, pagamento e troco) e ele chega organizado no seu WhatsApp. Sem comissão por pedido.</span>
+              <span class="links"><a href="https://demo.leontech.dev.br/catalogo/" target="_blank" rel="noopener">Ver demo</a><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20cat%C3%A1logo%20com%20pedido%20no%20WhatsApp." target="_blank" rel="noopener">Quero este</a></span></li>
+          </ul>
+        </article>
+        <article class="grupo">
+          <h3><svg class="ico"><use href="#i-mais"/></svg>Complementos</h3>
+          <p>Detalhes que passam profissionalismo e economizam tempo.</p>
+          <ul class="servicos">
+            <li><b>E-mail com o seu domínio</b><span class="valor">R$ 200</span>
+              <span class="desc">Endereço como contato@suaempresa.com.br, recebendo e enviando pelo seu Gmail, sem mensalidade de e-mail.</span>
+              <span class="links"><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20e-mail%20com%20meu%20dom%C3%ADnio." target="_blank" rel="noopener">Quero este</a></span></li>
+            <li><b>WhatsApp Business organizado</b><span class="valor">R$ 180</span>
+              <span class="desc">Perfil comercial, catálogo de serviços, mensagem de boas-vindas e de ausência, respostas rápidas e etiquetas para não perder cliente.</span>
+              <span class="links"><a href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Vi%20o%20site%20da%20LeonTech%20e%20quero%20saber%20do%20WhatsApp%20Business%20organizado." target="_blank" rel="noopener">Quero este</a></span></li>
+            <li><b>Manutenção mensal</b><span class="valor">R$ 150<small>/mês</small></span>
+              <span class="desc">Ajustes de texto e preço, conferência de funcionamento e relatório mensal. Sem fidelidade.</span>
+              <span class="links"><a href="#pacotes">Ver detalhes</a></span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="pacotes">
     <div class="container">
       <div class="cabecalho">
         <span class="rotulo">Pacotes</span>
@@ -406,13 +520,13 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
     </div>
   </section>
 
-  <section class="alt" id="demo">
+  <section id="demo">
     <div class="container">
       <div class="demo-caixa">
         <div>
           <span class="rotulo">Demo</span>
           <h2 class="titulo">Veja funcionando antes de decidir</h2>
-          <p class="lead">A demo mostra a página de um negócio fictício, com formulário e botão de WhatsApp de verdade. Troque o tipo de negócio no topo dela.</p>
+          <p class="lead">As demos usam negócios fictícios, com formulário e botão de WhatsApp de verdade. Troque o tipo de negócio no topo de cada uma.</p>
           <div class="acoes">
             <a class="btn btn-primario" href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">Abrir a demo<svg class="ico"><use href="#i-seta"/></svg></a>
             <a class="btn btn-contorno" href="https://wa.me/5531992868113?text=Ol%C3%A1!%20Quero%20uma%20pr%C3%A9via%20gr%C3%A1tis%20com%20o%20nome%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener"><svg class="ico ico-wa ico-wa-verde" aria-hidden="true"><use href="#i-whatsapp"/></svg>Pedir prévia grátis com o meu nome</a>
@@ -432,10 +546,28 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
           </div>
         </div>
       </div>
+      <div class="demos">
+        <article class="demo-extra">
+          <div><h3>Orçamentos e ordens de serviço</h3><p>Orçamento pelo WhatsApp e andamento até a entrega. Oficina, assistência de celular, ar-condicionado e chaveiro.</p></div>
+          <a class="btn btn-contorno" href="https://demo.leontech.dev.br/sistema-os/" target="_blank" rel="noopener">Abrir demo<svg class="ico"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="demo-extra">
+          <div><h3>Agenda com confirmação</h3><p>Cliente marca o horário; você confirma e lembra pelo WhatsApp. Barbearia, salão, estética e banho e tosa.</p></div>
+          <a class="btn btn-contorno" href="https://demo.leontech.dev.br/agenda/" target="_blank" rel="noopener">Abrir demo<svg class="ico"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="demo-extra">
+          <div><h3>Catálogo com pedido no WhatsApp</h3><p>Pedido completo, com entrega, pagamento e troco, direto no WhatsApp. Lanchonete, confeitaria, açaí e hortifrúti.</p></div>
+          <a class="btn btn-contorno" href="https://demo.leontech.dev.br/catalogo/" target="_blank" rel="noopener">Abrir demo<svg class="ico"><use href="#i-seta"/></svg></a>
+        </article>
+        <article class="demo-extra">
+          <div><h3>Site institucional</h3><p>Modelo de 5 páginas: início, sobre, serviços, galeria e contato pelo WhatsApp.</p></div>
+          <a class="btn btn-contorno" href="https://demo.leontech.dev.br/site-modelo/" target="_blank" rel="noopener">Abrir modelo<svg class="ico"><use href="#i-seta"/></svg></a>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="portfolio">
+  <section class="alt" id="portfolio">
     <div class="container">
       <div class="cabecalho">
         <span class="rotulo">Portfólio</span>
@@ -470,7 +602,7 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
     </div>
   </section>
 
-  <section class="alt duvidas" id="duvidas">
+  <section class="duvidas" id="duvidas">
     <div class="container">
       <div class="cabecalho">
         <span class="rotulo">Dúvidas</span>
@@ -480,10 +612,12 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
       <div>
         <details><summary>Preciso já ter site ou domínio?</summary><p>Não. Se você ainda não tem domínio, eu ajudo a registrar no seu nome (cerca de R$ 40 por ano, pago direto ao Registro.br). Ele fica sempre com você.</p></details>
         <details><summary>A LeonTech atende fora de Belo Horizonte?</summary><p>Sim. O atendimento é remoto, pelo WhatsApp, para negócios de qualquer cidade do Brasil. Em BH e região também dá para combinar uma visita.</p></details>
-        <details><summary>Tem mensalidade obrigatória?</summary><p>Não. Os pacotes têm preço fechado. A manutenção de R$ 150/mês é opcional e pode ser cancelada a qualquer momento, com aviso de 30 dias.</p></details>
+        <details><summary>Tem mensalidade obrigatória?</summary><p>Para página, Perfil no Google, e-mail e WhatsApp Business, não: o preço é fechado, e a manutenção de R$ 150/mês é opcional. O sistema de orçamentos e a reputação no Google são mensais, porque incluem suporte e trabalho todo mês. Tudo sem fidelidade, com aviso de 30 dias para cancelar.</p></details>
         <details><summary>Dá para garantir primeira página do Google ou número de clientes?</summary><p>Não, e desconfie de quem garante. O que eu entrego é o seu negócio bem apresentado no Google e um caminho fácil para o cliente pedir, com cada pedido anotado para você acompanhar.</p></details>
         <details><summary>Quanto tempo leva?</summary><p>Perfil no Google em 2 dias, Essencial em 3 dias úteis e Completo em 5 dias úteis, contando a partir do envio das informações e da primeira parcela.</p></details>
         <details><summary>Como funciona o pagamento?</summary><p>50% por Pix no aceite da proposta e 50% na entrega, depois que você conferir e aprovar.</p></details>
+        <details><summary>Vocês fazem sistema, além de página?</summary><p>Sim. Já existem o sistema de orçamentos e ordens de serviço, a agenda com confirmação e o catálogo com pedido no WhatsApp (veja as demos). Eles ficam na sua conta Google e funcionam no celular da equipe. Precisa de outra coisa? Conte pelo WhatsApp o que hoje você controla no caderno ou na planilha.</p></details>
+        <details><summary>Consigo ter e-mail com o nome da minha empresa?</summary><p>Sim. Configuro um endereço como contato@suaempresa.com.br que recebe e envia pelo seu Gmail, sem mensalidade de e-mail. Você só precisa ter o domínio (cerca de R$ 40 por ano).</p></details>
         <details><summary>Posso ver antes de fechar?</summary><p>Pode. Abra a demo ou peça pelo WhatsApp uma prévia grátis com o nome do seu negócio, sem compromisso.</p></details>
       </div>
     </div>
@@ -514,6 +648,7 @@ if (location.protocol === 'http:' && location.hostname === 'www.leontech.dev.br'
       <div>
         <h3>Contato</h3>
         <p>WhatsApp: <a href="https://wa.me/5531992868113" target="_blank" rel="noopener">(31) 99286-8113</a></p>
+        <p>E-mail: <a href="mailto:contato@leontech.dev.br">contato@leontech.dev.br</a></p>
         <p>Base em Belo Horizonte/MG</p>
         <p><a href="https://demo.leontech.dev.br/" target="_blank" rel="noopener">demo.leontech.dev.br</a></p>
       </div>
